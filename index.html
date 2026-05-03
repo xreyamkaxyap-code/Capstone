@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#" onclick="reload()" class="logo-text">Musicify</a>
+
+    <ul class="nav-links">
+      <li class="na active" onclick="filterMusic('all')">All</li>
+      <li class="na" onclick="filterMusic('pop')">Pop</li>
+      <li class="na" onclick="filterMusic('rap')">Rap</li>
+      <li class="na" onclick="filterMusic('lofi')">Lo-Fi</li>
+    </ul>
+
+    <div class="search-container">
+      <input type="text" class="search-input" id="search-text" placeholder="Search songs...">
+      <button class="search-button" id="search-button">Search</button>
+    </div>
+  </div>
+
+  
+
+  <div class="music-container" id="cards-container"></div>
+
+  <template id="template-music-card">
+    <div class="card">
+      <img class="music-image" id="music-image" src="" alt="music banner">
+
+      <div class="card-content">
+        <h3 class="music-title" id="music-title"></h3>
+        <p class="creator-name" id="creator-name"></p>
+        <p class="album-name" id="album-name"></p>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
