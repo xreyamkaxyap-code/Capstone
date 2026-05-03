@@ -1,15 +1,24 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music App</title>
+
+  <title>Musicify</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- NAVBAR -->
   <div class="nav">
-    <a href="#" onclick="reload()" class="logo-text">Musicify</a>
+
+    <a href="#" onclick="reload()" class="logo-text">
+      Musicify
+    </a>
 
     <ul class="nav-links">
       <li class="na active" onclick="filterMusic('all')">All</li>
@@ -19,27 +28,59 @@
     </ul>
 
     <div class="search-container">
-      <input type="text" class="search-input" id="search-text" placeholder="Search songs...">
-      <button class="search-button" id="search-button">Search</button>
+      <input
+        type="text"
+        class="search-input"
+        id="search-text"
+        placeholder="Search songs..."
+      >
+
+      <button class="search-button" id="search-button">
+        Search
+      </button>
     </div>
+
   </div>
 
-  
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Feel The Music 🎵</h1>
+      <p>Stream your favorite songs anytime, anywhere.</p>
+      <button>Explore Now</button>
+    </div>
+  </section>
 
+  <!-- MUSIC CARDS -->
   <div class="music-container" id="cards-container"></div>
 
+  <!-- CARD TEMPLATE -->
   <template id="template-music-card">
+
     <div class="card">
-      <img class="music-image" id="music-image" src="" alt="music banner">
+
+      <img
+        class="music-image"
+        id="music-image"
+        src=""
+        alt="music banner"
+      >
 
       <div class="card-content">
+
         <h3 class="music-title" id="music-title"></h3>
+
         <p class="creator-name" id="creator-name"></p>
+
         <p class="album-name" id="album-name"></p>
+
       </div>
+
     </div>
+
   </template>
 
   <script src="script.js"></script>
+
 </body>
 </html>
